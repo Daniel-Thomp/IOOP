@@ -20,8 +20,8 @@ public class EANBarcodeCompleter {
             } else {
                 System.out.println("Invalid barcode prefix");
             }
-            scanner.close();
         }
+        scanner.close();
     }
 
     public static boolean isDigits(String a) {
