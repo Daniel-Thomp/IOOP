@@ -1,0 +1,29 @@
+Barcode:
+prefix = 123456789012
+
+digits  1   2   3   4   5   6   7   8   9   0   1   2
+weight  1   4   1   4   1   4   1   4   1   4   1   4
+product 1   8   3   16  5   24  7   32  9   0   1   8
+total   1   9   12  28  33  57  64  96  105 105 106 114
+
+result = 114, 114 mod 10 is 4, 4 subtracted from 10 is 6
+therefore the complete barcode is 123456789012
+
+IBAN:
+input = GB44123456123456123456
+rearange: 123456123456123456GB44
+convert to integer: 123456123456123456161144
+result mod 89 is 1 so the IBAN is valid
+
+Luhn:
+input: 17893729974
+drop the check digit: 1789372997
+
+digit    7	9	9	2	7	3	9	8	7	1
+weight   2	1	2	1	2	1	2	1	2	1
+product 14	9	18	2	14	3	18	8	14	1
+sum      5  9   9   2   5   3   9   8   5   1
+
+the total is 56
+the check digit is (10-(56 mod 10)) mod 10 = 4
+as the original input ended in 4 it is valid

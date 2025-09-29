@@ -15,6 +15,7 @@ public class EANBarcodeCompleter {
                     int digit = Character.getNumericValue(barcodePrefix.charAt(i));
                     sum += digit * ((i % 2) * 3 + 1);
                 }
+                
                 System.out.println("Complete barcode:" + barcodePrefix + (10 - (sum % 10)));
 
             } else {
